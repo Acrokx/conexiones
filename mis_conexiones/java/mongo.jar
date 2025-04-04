@@ -1,0 +1,12 @@
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+
+public class ConexionMongoDB {
+    public static void main(String[] args) {
+        MongoClient mongoClient = new MongoClient("localhost", 27017);
+        MongoDatabase database = mongoClient.getDatabase("tienda");
+
+        // Lógica para obtener datos de la base de datos
+        mongoClient.close();
+    }
+}
